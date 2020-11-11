@@ -12,7 +12,9 @@ import intro from './markdown/intro.md'
 import install from './markdown/install.md'
 import started from './markdown/started.md'
 
-console.log('h+++++++', h, intro)
+import SwitchDemo from "./components/SwitchDemo.vue";
+
+
 
 const history  = createWebHashHistory()
 const md = string => h(Markdown, { content: string, key: string })
@@ -29,7 +31,7 @@ export const router = createRouter({
         { path: 'intro', component:  md(intro) },
         { path: 'install', component:  md(install) },
         { path: 'started', component:  md(started) },
-
+        { path: 'swicth', component:  SwitchDemo}
       ]
     },
     { path: '/HelloWorld', component: HelloWorld}

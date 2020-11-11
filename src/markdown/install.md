@@ -12,4 +12,4 @@ npm install gulu-ui-1
 yarn add gulu-ui-1
 ```
 
-下一节：[开始使用](#/doc/get-started)
+下一节：[开始使用](#/doc/started)

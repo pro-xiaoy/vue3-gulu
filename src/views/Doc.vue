@@ -94,5 +94,8 @@ aside {
 }
 main {
   overflow: auto;
+  padding-top: 50px;
+  padding-left: 40px;
+  box-sizing: border-box;
 }
 </style>

@@ -1,24 +1,24 @@
 
 <demo>
-  常规操作
+  支持disbaled
 </demo>
 
 <template>
-  <Switch v-model:value="bool" />
+  <Switch v-model:value="bool" disabled/>
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from 'vue'
 import { Switch } from "../libs";
 export default {
   components: {
-    Switch,
+    Switch
   },
   setup() {
-    const bool = ref(false);
+    const bool = ref(false)
     return {
-      bool,
-    };
-  },
-};
+      bool
+    }
+  }
+}
 </script>

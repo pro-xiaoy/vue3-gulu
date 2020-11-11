@@ -5,14 +5,22 @@
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-vue"></use>
         </svg>
-        <a class="menufile">文档</a>
+        <a class="menufile">
+          <router-link class="menufile" to="/doc">
+            文档
+          </router-link>
+        </a>
       </div>
       <div class="banner">
         <h1>Xiaoy-Template</h1>
         <h2>基于vue3的学习框架</h2>
         <div class="actions">
           <a href="javascript:;">GitHub</a>
-          <a href="javascript:;">开始</a>
+          <a href="javascript:;">
+            <router-link to="/doc">
+            开始
+            </router-link>
+          </a>
         </div>
       </div>
     </div>
@@ -94,12 +102,16 @@ export default {};
   }
   .actions {
     padding: 8px 0;
-    a {
+    >a {
       padding: 8px 24px;
       margin: 0 8px;
       background: #02bcb0;
       border-radius: 4px;
       display: inline-block;
+      text-decoration: none;
+      color: #fff;
+    }
+    a{
       text-decoration: none;
       color: #fff;
     }

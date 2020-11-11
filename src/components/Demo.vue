@@ -5,7 +5,7 @@
       <component :is="component" />
     </div>
     <div class="demo-actions">
-      <button>隐藏代码</button>
+      <button >隐藏代码</button>
       <button>查看代码</button>
     </div>
     <div class="demo-code">
@@ -20,12 +20,8 @@ export default {
     component: Object
   },
   setup(porps) {
-    console.log('props+++++', porps.component, typeof porps.component.__sourceCode )
     // const html = 
-    const html = `<div>
-      111
-      </div>`;
-    console.log('html+++', html)
+    const html = `111`;
     return {
       html
     }

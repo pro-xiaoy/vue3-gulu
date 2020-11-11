@@ -15,6 +15,11 @@
           </li>
         </ol>
         <h2>组建列表</h2>
+        <ol>
+          <li>
+            <router-link to="/doc/swicth">switch组建</router-link>
+          </li>
+        </ol>
       </aside>
       <main>
         <router-view />
@@ -63,9 +68,14 @@ $aside-index: 10;
   > main {
     flex-shrink: 1;
   }
+  ol,ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
 }
 aside {
-    background: lightblue;
+  background: lightblue;
 
   width: 150px;
   padding: 16px 0;

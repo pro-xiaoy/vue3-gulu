@@ -13,6 +13,7 @@ import install from './markdown/install.md'
 import started from './markdown/started.md'
 
 import SwitchDemo from "./components/SwitchDemo.vue";
+import ButtonDemo from "./components/ButtonDemo.vue";
 
 
 
@@ -31,7 +32,8 @@ export const router = createRouter({
         { path: 'intro', component:  md(intro) },
         { path: 'install', component:  md(install) },
         { path: 'started', component:  md(started) },
-        { path: 'swicth', component:  SwitchDemo}
+        { path: 'swicth', component:  SwitchDemo},
+        { path: 'button', component: ButtonDemo}
       ]
     },
     { path: '/HelloWorld', component: HelloWorld}

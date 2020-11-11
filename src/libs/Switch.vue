@@ -4,18 +4,25 @@
   </button>
 </template>
 
-<script lang="ts">
+<script lang="ts" >
+// 不使用script 里面的setup
 import { ref, SetupContext } from "vue";
 declare const props: {value: boolean}
 declare const context: SetupContext
 export default {
   props: {
     value: Boolean
+  },
+  setup(props, context) {
+    const toggle = () => {
+      context.emit("update:value", !props.value)
+    }
+    return {
+      toggle
+    }
   }
 }
-export const toggle = () => {
-  context.emit("update:value", !props.value)
-}
+
 </script>
 
 <style lang="scss">

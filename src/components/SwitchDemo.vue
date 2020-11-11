@@ -2,21 +2,24 @@
   <div>
     <h2>Switch 组建</h2>
     <Demo :component="Switch1" />
+    <Demo :component="Switch2" />
+
   </div>
 </template>
 
 <script lang="ts">
 import Demo from './Demo.vue'
 import Switch1 from './Switch1.Demo.vue'
-console.log('Switch1+++', Switch1)
+import Switch2 from './Switch2.Demo.vue'
 export default {
   
   components: {
-    Demo
+    Demo,
   },
   setup() {
     return {
-      Switch1
+      Switch1,
+      Switch2
     }
   }
 }

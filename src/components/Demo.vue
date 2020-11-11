@@ -20,7 +20,15 @@ export default {
     component: Object
   },
   setup(porps) {
-    console.log('props+++++', porps, porps.component)
+    console.log('props+++++', porps.component, typeof porps.component.__sourceCode )
+    // const html = 
+    const html = `<div>
+      111
+      </div>`;
+    console.log('html+++', html)
+    return {
+      html
+    }
   }
 }
 </script>

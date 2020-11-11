@@ -1,1 +1,4 @@
-console.log('caolege DJ')
+import {md} from './plugins/md';
+export default {
+  plugins: [md()]
+}

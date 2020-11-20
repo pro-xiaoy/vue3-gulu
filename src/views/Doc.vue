@@ -19,6 +19,15 @@
           <li>
             <router-link to="/doc/swicth">switch组建</router-link>
           </li>
+          <li>
+            <router-link to="/doc/button">button组建</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/dialog">dialog组建</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tabs">tabs组建</router-link>
+          </li>
         </ol>
       </aside>
       <main>

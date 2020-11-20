@@ -1,13 +1,41 @@
 <template>
-  <button class="hy-button">
+  <button class="hy-button" :class="classes">
     <slot />
   </button>
 </template>
 
 <script>
+import { computed } from "vue";
 export default {
-
-}
+  props: {
+    type: {
+      type: String,
+      default: "button",
+    },
+    size: {
+      type: String,
+      default: "normal",
+    },
+    level: {
+      type: String,
+      default: "normal",
+    },
+  },
+  setup(props) {
+    const { type, size, level } = props;
+    const classes = computed(() => {
+      return {
+        [`hy-type-${type}`]: type,
+        [`hy-size-${size}`]: size,
+        [`hy-level-${level}`]: level,
+      };
+    });
+    console.log("111+++", classes);
+    return {
+      classes,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
@@ -46,6 +74,41 @@ $grey: grey;
   }
   &::-moz-focus-inner {
     border: 0;
+  }
+  &.hy-type-link {
+    border-color: transparent;
+    color: $blue;
+    box-shadow: none;
+    &:hover,
+    &:focus {
+      color: lighten($blue, 10%);
+    }
+  }
+  &.hy-type-text {
+    border-color: transparent;
+    color: $color;
+    box-shadow: none;
+    &:hover,
+    &:focus {
+      background: darken(white, 5%);
+    }
+  }
+  &.hy-size-big {
+    height: 1.5 * $h;
+    font-size: 24px;
+    padding: 0 16px;
+  }
+  &.hy-size-small {
+    height: 0.6 * $h;
+    font-size: 12px;
+    padding: 0 4px;
+  }
+  &.hy-level-danger {
+    color: $red;
+    &:hover,
+    &:focus {
+      color: $red;
+    }
   }
 }
 </style>

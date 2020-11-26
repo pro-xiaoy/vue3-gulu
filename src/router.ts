@@ -14,7 +14,7 @@ import started from './markdown/started.md'
 
 import SwitchDemo from "./components/SwitchDemo.vue";
 import ButtonDemo from "./components/ButtonDemo.vue";
-
+import Dialog from './components/DialogDemo.vue'
 
 
 const history  = createWebHashHistory()
@@ -33,7 +33,8 @@ export const router = createRouter({
         { path: 'install', component:  md(install) },
         { path: 'started', component:  md(started) },
         { path: 'swicth', component:  SwitchDemo},
-        { path: 'button', component: ButtonDemo}
+        { path: 'button', component: ButtonDemo},
+        { path: 'dialog', component: Dialog}
       ]
     },
     { path: '/HelloWorld', component: HelloWorld}

@@ -6,14 +6,14 @@
         <div class="hy-dialog">
           <header>
             <slot name="title" />
-            <span  class="hy-dialog-close"></span>
+            <span @click="toggle" class="hy-dialog-close"></span>
           </header>
           <main>
             <slot name="content" />
           </main>
           <footer>
-            <Button level="main">OK</Button>
-            <Button>Cancel</Button>
+            <Button level="main" @click="onClickOk">OK</Button>
+            <Button @click="onClickCancel">Cancel</Button>
           </footer>
         </div>
       </div>
@@ -28,6 +28,27 @@ export default {
     visible: {
       type: Boolean,
       default: false
+    }
+  },
+  setup(props, content) {
+    console.log('props+++++', props, content)
+    const toggle = () => {
+      closePop()
+    }
+    const onClickOk = () => {
+      console.log('props+++', props)
+    }
+    const onClickCancel = () => {
+
+    }
+    const closePop = () => {
+      content.emit('update:visible',false)
+    }
+
+    return {
+      toggle,
+      onClickOk,
+      onClickCancel
     }
   },
   components: {

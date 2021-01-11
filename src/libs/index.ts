@@ -9,4 +9,3 @@ export {
   Dialog,
   openDialog
 }
-// export default openDialog

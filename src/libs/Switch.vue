@@ -6,7 +6,7 @@
 
 <script lang="ts" >
 // 不使用script 里面的setup
-import { ref, SetupContext } from "vue";
+import { SetupContext } from "vue";
 declare const props: {value: boolean}
 declare const context: SetupContext
 export default {

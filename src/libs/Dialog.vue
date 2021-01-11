@@ -31,12 +31,10 @@ export default {
     }
   },
   setup(props, content) {
-    console.log('props+++++', props, content)
     const toggle = () => {
       closePop()
     }
     const onClickOk = () => {
-      console.log('props+++', props)
     }
     const onClickCancel = () => {
 
@@ -44,7 +42,6 @@ export default {
     const closePop = () => {
       content.emit('update:visible',false)
     }
-
     return {
       toggle,
       onClickOk,
